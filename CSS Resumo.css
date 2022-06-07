@@ -1,0 +1,222 @@
+
+body{
+    background-color: black;
+    color: greenyellow;
+    text-align: center;
+} /* Tag, #id, .class*/
+
+#Listas *{
+    text-align: left;
+} /*Seletor geral, selecion tudo que é descendente de #Lista*/
+
+#Listas .Não-ordenada{
+    color: yellow
+} /*Seleciona todos os descendentes de Listas com a classe Não ordenada*/
+
+#Listas .Ordenada{
+    color: orange;
+} /*Seleciona todos os descendentes de Listas com a classe Ordenada*/
+
+#Listas .teste{
+    color: pink
+} /*Seleciona todos os descendentes de Listas com a classe teste*/
+
+#Listas > .list{
+    font-size: 30px;
+} /*Seleciona apenas os filhos diretos de Listas com a classe list*/
+
+p{
+    color: purple;
+} /*Seleciona tudo que é p*/
+
+.imp{
+    color: red;
+} /*Seleciona tudo da classe imp*/
+
+p.imp{
+    color: blue;
+} /*Seleciona apenas os p que são imp*/                                  
+
+a[href*="Lockheed"]{
+   background-color: yellow;
+} /*Seleciona apenas os "a" que contem a palavra "Lockheed"*/
+
+h1[title]{
+    background-color: blueviolet;
+} /*Seleciona apenas os "h1" que contem o atributo "title"*/
+
+a:link{
+    font-size: 20px;
+} /*Link não visitado*/
+
+a:visited{
+    background-color: aqua;
+} /*Link já visitado, aparentemente nenhum efeito, apenas sobrescreve o a[href*="Lockheed"]*/
+
+a:hover{
+    color: red;
+} /*Cursor sobre o link, funciona com outros elementos*/
+
+a:active{
+    font-size: 30px;
+} /*Link selecionado*/
+
+input:focus{
+    background-color: red;
+} /*Quando um elemento está com foco*/
+
+input:checked{
+    font-style: italic;
+} /*Quando um elemento é selecionado*/
+
+input:required{
+    font-size: 50px;
+} /*quando um elemento é obrigatório*/
+
+input:hover{
+    background-color: blue;
+} /*Cursor sobre o elemento*/
+
+/* Pseudo-classes
+    :first-child{
+        Primeiro filho de um elemento, vide exemplo de estruturação;
+    }
+
+    :last-child{
+        Último filho de um elemento;
+    }
+
+    :only-child{
+        Único filho de um elemento;
+    }
+
+    :disabled{
+        Quando um elemento está desabilitado;
+    }
+
+    :empty{
+        Elemento sem filhos;
+    }
+*/
+
+ul li:first-child{
+    background-color: red;
+} /*Formatar o primeiro filho de um elemento, vide exemplo de estruturação*/
+
+h1::first-letter{
+    font-style: oblique;
+} /*Formatar a primeira letra de um elemento, vide exemplo de estruturação*/
+
+::marker{
+    color: red;
+} /*Alterar o marcador de uma lista*/
+
+::selection{
+    background-color: red;
+    color: black;
+} /*Alterar o texto selecionado pelo usuário*/
+
+#p::first-line{
+    color: blue !important; /*Definir que essa regra deve sobrescrever alguma outra regra independentemente da hierarquia*/
+} /*Formatar a primeira linha de um elemento*/
+
+p span{
+    color: white;
+} /*Formata as excessões, neste exemplo o span de p*/
+
+.herança{
+    background-color: white;
+    color:black
+} /*Formatação de h1 . herança*/
+
+.herança2{
+    background-color: white;
+    color:black
+} /*Formatação de h1 . herança2*/
+
+.herança2 mark{
+    background-color: inherit;
+    color: inherit;
+} /*Herança do h1 para o atributo mark em h1 .herança2*/
+
+/* Regras para a estruturação de um elemnto
+ 
+    [Elemento -> padding -> border -> margin]
+
+    Elemento{
+        atributo: característica;
+    }
+
+    div{
+        border: 5px;
+    }
+
+    *Ordem de configuração*
+
+    div{
+        border: 1px;
+    } <!--topo-direita-base-esquerda-->
+
+    div{
+        border: 1px 2px;
+    } <!--topo-base, direita-esquerda-->
+
+    div{
+        border: 1px 2px 3px;
+    } <!--topo, direita-esquerda-base-->
+    
+    div{
+        border: 1px 2px 3px 4px;
+    } <!--topo, base, direita, esquerda-->
+
+    *Ou diretamente na característica*
+
+    div{
+        border-left: 1px;
+        border-right: 2px;
+        border-top: 3px;
+        border-bottom: 4px;
+    }
+        
+*/
+
+/* Cores
+
+    color: blue {nome da cor}
+
+    color: rgb {0-255, 0-255, 0-255} - Intensidade de vermelho, verde e azul. Azul seria rgb( 0, 0, 255)
+
+    color: hexadecimal {0-f 0-f, 0-f 0-f, 0-f 0-f} - Intensidade de rgb representada em 16 dígitos (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f). Azul seria #0000ff 
+
+    color: hsl {0-360, 0-100%, 0-100%} - Tonalidade de cor, saturação e brilho. Azul seria hsl(240, 100%, 50%)
+    
+    valores de opacidade se aplicam para rgb e hsl sendo de 0-1. Exemplo color: rgba(100,150,200,0)
+    
+    Hexadecimal pode ser abreviado em 3 dígitos. Exemplo #403020 -> #432
+    
+*/
+
+/* Sobre o posicionamento do background
+
+    *Atrelamento de imagens*
+
+    Elemento{
+        background-image: url(httpps://www.exemplo.com/);
+    }
+
+    *Repetição da imagem de fundo*
+
+    Elemento{
+        background-repeat: repeat (todas as direções)
+        background-repeat: repeat-x (horizontalmente)
+        background-repeat: repeat-y (verticalmente)
+        background-repeat: no-repeat (não repetir imagem de fundo)
+    }
+
+    *Posicionamento*
+
+    Elemento:{
+        background-position: right left top bottom;
+    }
+
+*/

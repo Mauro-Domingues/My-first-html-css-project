@@ -1,4 +1,4 @@
-# My-first-html-css-project
+# Meu-primeiro-projeto-html-css
 
 Este é meu primeiro arquivo html + css. Nele eu sumarizo algumas funções essenciais, um material no qual é utilizado para fins de consulta e estudo.
 

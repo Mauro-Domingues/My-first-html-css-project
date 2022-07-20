@@ -4,4 +4,4 @@ Este é meu primeiro arquivo html + css. Nele eu sumarizo algumas funções esse
 
 Note que o intuito não é a aparência da página e sim a exemplificação de cada função e suas respectivas anotações dentro do código.
 
-Visualizar em https://mauro-domingues.github.io/My-first-html-css-project/
+Visualizar em https://mauro-domingues.github.io/Meu-primeiro-projeto-html-css/
